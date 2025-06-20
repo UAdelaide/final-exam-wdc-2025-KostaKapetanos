@@ -3,7 +3,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-const db = require('./db'); // new: load pooled db connection
+const db = require('./db'); // load pooled db connection
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
