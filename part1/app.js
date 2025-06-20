@@ -3,7 +3,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-const db = require('./db'); // loads db and populates if empty
+const db = require('./db'); // loads db and inserts sample data if empty
 
 // Built-in routes
 var indexRouter = require('./routes/index');
