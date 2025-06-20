@@ -91,7 +91,7 @@
             for (let dog of dogsData) {
               const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
               const imgData = await imgRes.json();
-              dog.photo = imgData.message;
+              dog.photo = imgData.message; // add image to dog object
         }
 
       }
