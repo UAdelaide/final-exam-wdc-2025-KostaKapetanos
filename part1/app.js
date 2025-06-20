@@ -3,7 +3,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-const db = require('./db'); // loads db and triggers seedDatabase() on import
+const db = require('./db'); // loads db and populates if empty
 
 // Built-in routes
 var indexRouter = require('./routes/index');
