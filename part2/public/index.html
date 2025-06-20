@@ -61,8 +61,11 @@
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ email: this.email, password: this.password })
             });
-            
+
+            // parse response
             const data = await response.json();
+
+            // if login failed, throw the error to show on screen
           }
     }).mount('#app');
   </script>
