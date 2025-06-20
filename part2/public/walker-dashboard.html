@@ -95,11 +95,11 @@
           try {
             const user = await getCurrentUser(); // get current logged in user from session
             if (!user) throw new Error('Walker not logged in');
-            
+
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ walker_id: user })
+              body: JSON.stringify({ walker_id: user.user })
             });
             const result = await res.json();
 
