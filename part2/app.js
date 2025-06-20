@@ -10,11 +10,11 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
-// session setup added
+// session setup to can track logged in users
 app.use(session({
-    secret: 'dog-walking-secret',
-    resave: false,
-    saveUninitialized: true
+    secret: 'dog-walking-secret',   // keeps session data secure
+    resave: false,                  // don't save if nothing changed
+    saveUninitialized: true         // save new sessions (like after login)
   }));
 
 // Routes
