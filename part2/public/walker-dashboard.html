@@ -90,7 +90,7 @@
           }
         }
 
-        
+        // modified applyToWalk to get walker ID dynamically instead of hardcoding
         async function applyToWalk(requestId) {
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
