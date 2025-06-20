@@ -5,6 +5,7 @@ var logger = require('morgan');
 
 const db = require('./db'); // load pooled db connection
 
+// Built in routes
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
