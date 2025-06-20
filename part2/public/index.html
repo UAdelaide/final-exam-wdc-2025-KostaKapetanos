@@ -36,8 +36,9 @@
     <!-- when clicked triggers handleLogin() via form submission -->
     <button type="submit" class="btn btn-primary">Log In</button>
 
-    <!-- shows error message i.e invalid credentials
-
+    <!-- shows error message i.e invalid credentials if login fails -->
+    <p class="text-danger mt-3" v-if="error">{{ error }}</p>
+    
 
   <script>
     const { createApp } = Vue;
