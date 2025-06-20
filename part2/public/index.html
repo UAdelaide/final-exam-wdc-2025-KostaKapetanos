@@ -68,6 +68,9 @@
             // if login failed, throw error to show on screen
             if (!response.ok) throw new Error(data.error || 'Login failed');
 
+            // redirect user based on their role
+            if (data.user.role === 'owner') {
+
           }
     }).mount('#app');
   </script>
