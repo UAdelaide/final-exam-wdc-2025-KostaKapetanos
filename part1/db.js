@@ -61,7 +61,7 @@ async function seedDatabase() {
         )
       `);
 
-      console.log('Sample data inserted into database.');
+      console.log('Sample data inserted successfully.');
     }
   } catch (err) {
     console.error('Error seeding database:', err.message);
