@@ -20,10 +20,11 @@ app.use(session({
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
-const dogRoutes = require('./routes/dogRoutes');
+const dogRoutes = require('./routes/dogRoutes'); // added
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/dogs', dogRoutes); // added
 
 // Export the app instead of listening here
 module.exports = app;
