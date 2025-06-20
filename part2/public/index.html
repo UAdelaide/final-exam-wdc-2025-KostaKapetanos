@@ -60,7 +60,11 @@
           <td>{{ dog.size }}</td>
           <td>{{ dog.owner_username }}</td>
           <td>
-
+            <img :src="dog.photo" alt="dog image" style="height: 80px;" />
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
   <script>
