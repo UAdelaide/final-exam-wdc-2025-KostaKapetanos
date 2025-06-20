@@ -94,6 +94,8 @@
               dog.photo = imgData.message; // add image to dog object
             }
             this.dogs = dogsData; // store updated list in Vue state
+          } catch (err) {
+              console.error('Failed to load dogs', err);
           }
       }
     }).mount('#app');
