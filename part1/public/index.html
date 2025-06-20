@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Dog Of The Day</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <script src="https://unpkg.com/vue@3"></script>
+  <meta charset="UTF-8" />
+  <title>Dog Of The Day</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="https://unpkg.com/vue@3"></script>
 </head>
 
 <body>
-    <div id="app">
-        <h1>Dog of the Day</h1>
-        <img :src="dogImage" alt="Random dog photo" v-if="dogImage">
-        <p>Name: Rufus</p>
-        <p>Breed: Unknown</p>
-        <button @click="fetchDog">Load New Dog</button>
-    </div>
+  <div id="app">
+    <h1>Dog of the Day</h1>
+    <img :src="dogImage" alt="Random dog photo" v-if="dogImage">
+    <p>Name: Rufus</p>
+    <p>Breed: Unknown</p>
+    <button @click="fetchDog">Load New Dog</button>
+  </div>
 
-        <script>
-        const { createApp } = Vue;
+  <script>
+    const { createApp } = Vue;
 
-        createApp({
-            data() {
-                return {
-                    dogImage: ''
-                };
-            },
-            methods: {
-                async fetchDog() {
-                    try {
-                        const response = await fetch('https://dog.ceo/api/breeds/image/random');
-                        const data = await response.json();
-                        this.dogImage = data.message;
-                    } catch (error) {
-                        console.error('Failed to fetch dog image:', error);
-                    }
-                }
-            },
-            mounted() {
-                this.fetchDog();
-            }
-        }).mount('#app');
-        </script>
-
+    createApp({
+      data() {
+        return {
+          dogImage: ''
+        };
+      },
+      methods: {
+        async fetchDog() {
+          try {
+            const response = await fetch('https://dog.ceo/api/breeds/image/random');
+            const data = await response.json();
+            this.dogImage = data.message;
+          } catch (error) {
+            console.error('Failed to fetch dog image:', error);
+          }
+        }
+      },
+      mounted() {
+        this.fetchDog();
+      }
+    }).mount('#app');
+  </script>
 </body>
 </html>
