@@ -32,9 +32,14 @@
       <input v-model="password" type="password" class="form-control" required />
     </div>
 
-    <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
-    <a href="walker-dashboard.html" class="btn btn-outline-success">Walker Dashboard</a>
-  </div>
+    <!-- Password input field -->
+    <!-- v-model keeps synced with password variable -->
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input v-model="password" type="password" class="form-control" required />
+    </div>
+
+
 
   <script>
     const { createApp } = Vue;
