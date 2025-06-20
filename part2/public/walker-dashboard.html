@@ -51,6 +51,8 @@
         const error = ref('');
         const user = 3;
 
+        // Logout function added
+        // Sends POST request to /api/users/logout and redirects to login page
         async function logout() {
           try {
             const res = await fetch('/api/users/logout', {
