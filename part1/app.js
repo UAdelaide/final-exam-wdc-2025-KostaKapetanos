@@ -2,7 +2,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var mysql = require('mysql2/promise');
+
+const db = require('./db'); // new: load pooled db connection
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -22,26 +23,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-let db;
-
-(async () => {
-  try {
-    db = await mysql.createConnection({
-      host: 'localhost',
-      user: 'root',
-      password: '',
-      database: 'DogWalkService'
-    });
-
-    console.log('Connected to DogWalkService database');
-
-    app.use('/api/dogs', dogsRoute(db));
-    app.use('/api/walkrequests', walkRequestsRoute(db));
-    app.use('/api/walkers', walkersRoute(db));
-
-  } catch (err) {
-    console.error('Database connection failed:', err.message);
-  }
-})();
+// API routes with shared db
+app.use('/api/dogs', dogsRoute(db));
+app.use('/api/walkrequests', walkRequestsRoute(db));
+app.use('/api/walkers', walkersRoute(db));
 
 module.exports = app;
