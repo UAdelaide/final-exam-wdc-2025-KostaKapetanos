@@ -110,13 +110,13 @@
 
         // added loadMyDogs() function
         async function loadMyDogs() {
-  try {
-    const res = await fetch('/api/users/mydogs');
-    myDogs.value = await res.json();
-  } catch (err) {
-    console.error('Failed to load user dogs');
-  }
-}
+          try {
+            const res = await fetch('/api/users/mydogs');
+            myDogs.value = await res.json();
+          } catch (err) {
+            console.error('Failed to load user dogs');
+          }
+        }
 
         async function loadWalks() {
           try {
