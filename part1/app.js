@@ -5,7 +5,7 @@ var logger = require('morgan');
 
 const db = require('./db'); // loads db and triggers seedDatabase() on import
 
-// Built in routes
+// Built-in routes
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
