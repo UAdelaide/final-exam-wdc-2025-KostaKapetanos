@@ -10,7 +10,9 @@
 <body>
     <div id="app">
         <h1>Dog of the Day</h1>
-        <img :src="dogImage" alt="Random dog photo" v-if="dogImage">
+        <template v-if="dogImage">
+            <img :src="dogImage" alt="Random dog photo">
+        </template>
         <p>Name: Rufus</p>
         <p>Breed: Unknown</p>
         <button @click="fetchDog">Load New Dog</button>
