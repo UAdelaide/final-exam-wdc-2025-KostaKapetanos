@@ -76,6 +76,8 @@
             return await res.json(); // returns user object like { user_id, username, role }
           } catch (err) {
             error.value = 'Failed to fetch user';
+            return null;
+          }
         }
 
         async function loadWalkRequests() {
