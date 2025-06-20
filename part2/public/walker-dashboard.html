@@ -70,7 +70,10 @@
 
         // added getCurrentUser to dynamically fetch logged in user from session
         async function getCurrentUser() {
-          
+          try {
+            const res = await fetch('/api/users/me');
+            if (!res.ok) throw new Error('User not logged in');
+
         }
 
         async function loadWalkRequests() {
