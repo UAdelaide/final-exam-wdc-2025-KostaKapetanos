@@ -18,27 +18,28 @@
     <!-- @submit.prevent stops page reload and runs handleLogin() -->
     <form @submit.prevent="handleLogin" class="mt-4">
 
-    <!-- Email input field -->
-    <!-- v-model binds email variable to whatever user types in -->
-    <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
-      <input v-model="email" type="email" class="form-control" required />
-    </div>
+      <!-- Email input field -->
+      <!-- v-model binds email variable to whatever user types in -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input v-model="email" type="email" class="form-control" required />
+      </div>
 
-    <!-- Password input field -->
-    <!-- v-model keeps synced with password variable -->
-    <div class="mb-3">
-      <label for="password" class="form-label">Password</label>
-      <input v-model="password" type="password" class="form-control" required />
-    </div>
+      <!-- Password input field -->
+      <!-- v-model keeps synced with password variable -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input v-model="password" type="password" class="form-control" required />
+      </div>
 
-    <!-- actual login button -->
-    <!-- when clicked triggers handleLogin() via form submission -->
-    <button type="submit" class="btn btn-primary">Log In</button>
+      <!-- actual login button -->
+      <!-- when clicked triggers handleLogin() via form submission -->
+      <button type="submit" class="btn btn-primary">Log In</button>
 
-    <!-- shows error message i.e invalid credentials if login fails -->
-    <p class="text-danger mt-3" v-if="error">{{ error }}</p>
-    
+      <!-- shows error message i.e invalid credentials if login fails -->
+      <p class="text-danger mt-3" v-if="error">{{ error }}</p>
+    </form>
+  
 
   <script>
     const { createApp } = Vue;
