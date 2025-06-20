@@ -8,6 +8,7 @@ const db = require('./db'); // load pooled db connection
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+
 const dogsRoute = require('./routes/api/dogs');
 const walkRequestsRoute = require('./routes/api/walkrequests');
 const walkersRoute = require('./routes/api/walkers');
