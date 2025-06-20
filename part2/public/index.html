@@ -14,18 +14,18 @@
     <h1 class="mb-4 text-primary">Welcome to the Dog Walking Service!</h1>
     <p class="lead">Connect with trusted walkers for your beloved dog!</p>
 
-    <!-- This is the login form added -->
+    <!-- login form added -->
     <!-- @submit.prevent stops page reload and runs handleLogin() -->
     <form @submit.prevent="handleLogin" class="mt-4">
 
-      <!-- Email input field -->
+      <!-- email input field -->
       <!-- v-model binds email variable to whatever user types in -->
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
         <input v-model="email" type="email" class="form-control" required />
       </div>
 
-      <!-- Password input field -->
+      <!-- password input field -->
       <!-- v-model keeps synced with password variable -->
       <div class="mb-3">
         <label for="password" class="form-label">Password</label>
