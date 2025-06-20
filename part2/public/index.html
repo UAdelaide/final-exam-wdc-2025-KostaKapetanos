@@ -55,7 +55,10 @@
       methods: {
         async handleLogin() {
           try {
-            // Send login credentials to backend
+            // send login credentials to backend
+            const response = await fetch('/api/users/login', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
       }
     }).mount('#app');
   </script>
