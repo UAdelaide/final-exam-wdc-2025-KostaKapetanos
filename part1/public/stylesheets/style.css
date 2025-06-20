@@ -5,3 +5,9 @@ body {
   color: #333;
   text-align: center;
 }
+
+img {
+  max-width: 400px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
