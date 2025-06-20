@@ -68,6 +68,9 @@
           }
         }
 
+        // added getCurrentUser to dynamically fetch logged-in user from the session
+        async function getCurrentUser() {
+
         async function loadWalkRequests() {
           try {
             const res = await fetch('/api/walks');
