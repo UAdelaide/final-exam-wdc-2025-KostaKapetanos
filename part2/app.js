@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 require('dotenv').config();
 
-const session = require('express-session'); // import session
+const session = require('express-session'); // import session added
 
 const app = express();
 
@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
-// session setup
+// session setup added
 app.use(session({
     secret: 'dog-walking-secret',
     resave: false,
