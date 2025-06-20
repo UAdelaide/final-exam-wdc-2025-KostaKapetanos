@@ -97,6 +97,8 @@
             } else {
               throw new Error('Logout failed');
             }
+          } catch (err) {
+            error.value = err.message;
           }
         }
 
