@@ -61,7 +61,7 @@ async function seedDatabase() {
         )
       `);
 
-      console.log('Sample data inserted into DogWalkService.');
+      console.log('Sample data inserted into database.');
     }
   } catch (err) {
     console.error('Error seeding database:', err.message);
