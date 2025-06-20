@@ -38,6 +38,10 @@
       <!-- shows error message i.e invalid credentials if login fails -->
       <p class="text-danger mt-3" v-if="error">{{ error }}</p>
     </form>
+
+    <!-- dog list table below login -->
+    
+
   </div>
 
   <script>
@@ -99,7 +103,7 @@
           }
         }
       },
-      
+
       mounted() {
         this.loadDogs(); // load dog list and images when page first loads
       }
