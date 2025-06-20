@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
-// session setup to can track logged in users
+// session setup added to can track logged in users
 app.use(session({
     secret: 'dog-walking-secret',   // keeps session data secure
     resave: false,                  // don't save if nothing changed
