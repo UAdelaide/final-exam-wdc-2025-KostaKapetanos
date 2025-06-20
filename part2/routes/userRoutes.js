@@ -58,7 +58,9 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// POST logout
+// POST logout new route to destroy session and return to login
+router.post('/logout', (req, res) => {
+
 
 
 module.exports = router;
